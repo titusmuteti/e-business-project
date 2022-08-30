@@ -1,0 +1,19 @@
+html {
+    display: block;
+    height: 80px;
+}
+body {
+    background-color: plum;
+    margin: 0px;
+    padding-top: 0em;
+}
+header#head {
+    background: white;
+    text-align: center;
+    
+}
+
+
+p {
+    font-style: italic;
+}
