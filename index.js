@@ -7,18 +7,17 @@ function getData() {
     products;
     let data = JSON.stringify(products,['id', 'category', 'title', 'image', 'price']);
 
-    document.querySelector('div').innerHTML = `
-    <h1 class ="title">products (${products.length}results)</h1>
+    document.querySelector('div#items').innerHTML = 
+    `<h1 class ="title">Available products products</h1>
     ${products.map(function (product){
-        return `
-        <div class = item>
+        return `<div class = item>
+        <h2 class="productName">${product.title}</h2>
         <img src = "${product.image}">
-        <h2 class="productName">${product.title}</h>
-        </div>
-        `
+        
+        
+        </div>`
     }).join('')}
-    <p>the place to place ${products.length}</p>
-    `
+    <p>the place to place ${products.length}</p>`
 }); 
 }
 
