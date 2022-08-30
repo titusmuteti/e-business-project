@@ -6,7 +6,6 @@ function getData() {
    .then (products => {
     products;
     let data = JSON.stringify(products,['id', 'category', 'title', 'image', 'price']);
-    console.log(products.length);
 
     document.querySelector('div').innerHTML = `
     <h1 class ="title">products (${products.length}results)</h1>
@@ -14,6 +13,7 @@ function getData() {
         return `
         <div class = item>
         <img src = "${product.image}">
+        <h2 class="productName">${product.title}</h>
         </div>
         `
     }).join('')}
