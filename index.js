@@ -25,11 +25,11 @@ function getData() {
         const productPrize = document.createElement('h4');
 
         //populate properties with data
-        productImage.innerHTML = product.image;
+        productImage.src = product.image;
         productTitle.innerHTML = product.title;
         productPrize.innerHTML = product.price
 
-        console.log(product.price);
+        console.log(productImage.src );
 
         //append elements to productDiv
         productDiv.appendChild(productTitle);
