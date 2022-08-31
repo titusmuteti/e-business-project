@@ -1,6 +1,6 @@
 # e-business-project
 # Introduction 
-'Class collection ltd' is an e-business application that presents various products, ranging from clothes to electronics to rings to potential buyers, mainly targeting the youth. It fetches a public API and uses it to display specific information. By clicking on the buttons users can see the number of likes or dislikes a given product has. The likes and dislikes are used to gauge a buyer feeling about the product as well as showcase the popularity of a given item.
+'Class collection ltd' is an e-business application that presents various products, ranging from clothes to electronics to rings to potential buyers, mainly targeting the youth. It fetches a public API and uses it to display specific information. By clicking on the buttons users can see the number of likes or dislikes a given product has. The likes and dislikes are used to gauge a buyer's feeling about the product as well as showcase the popularity of a given item.
 
 # Technologies 
 - HTML 
