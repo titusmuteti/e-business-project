@@ -6,14 +6,14 @@
 HTML, CSS, and Javascript.
 
 # Project MVP
-Landing page
-Like/dislike buttons
-Product price
+- Landing page
+- Like/dislike buttons
+- Product price
 
 # setup instructions
-To use the project, fork the project and open the directory.
-To open the application in the browser type open index.html in the CLI.
-No dependencies required
+- To use the project, fork it and open the directory containing the project.
+- For use in the browser type open index.html in the CLI.
+- No dependencies required
 
 
 # Author 
