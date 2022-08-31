@@ -28,7 +28,8 @@ function getData() {
         const disLikeBtn =  document.createElement('button');
 
         //number of likes
-        let count = 1;
+        let likecount = 1;
+        let dislikeCount =1;
 
         //populate properties with data
         productImage.src = product.image;
@@ -65,10 +66,14 @@ function getData() {
 
         //adding event listener to button
         likeBtn.addEventListener('click', ()=> {
-            likeBtn.innerHTML = `${count++} likes`
-            likeBtn.style.backgroundColor = '#89CFF0'
-        
-    })
+            likeBtn.innerHTML = `${likecount++} likes`
+            likeBtn.style.backgroundColor = '#89CFF0'  
+        })
+        //adding event listener to button
+        disLikeBtn.addEventListener('click', ()=> {
+            disLikeBtn.innerHTML = `${dislikeCount++} Dislikes`
+            disLikeBtn.style.backgroundColor = 'red'  
+        })
 
     });
 
