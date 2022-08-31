@@ -1,24 +1,42 @@
+
 const public_api_url = 'https://fakestoreapi.com/products';
+let items = document.querySelector('div#items');
+
+
 
 function getData() {
-    fetch (public_api_url)
+    fetch (public_api_url, {
+        method: 'GET'
+    })
    .then (response => response.json())
-   .then (products => {
-    products;
-    let data = JSON.stringify(products,['id', 'category', 'title', 'image', 'price']);
+   .then (data => {
+    let products = data;
 
-    document.querySelector('div#items').innerHTML = 
-    `<h1 class ="title">Available products products</h1>
-    ${products.map(function (product){
-        return `<div class = item>
-        <h2 class="productName">${product.title}</h2>
-        <img src = "${product.image}">
-        
-        
-        </div>`
-    }).join('')}
-    <p>the place to place ${products.length}</p>`
+    const divs = document.getElementById('items');
+    //styling
+    divs.styles = "display:flex"
+    products.forEach(product => {
+        //defining elements
+        const productDiv = document.createElement('div');
+        const productImage = document.createElement('img');
+        const productTitle = document.createElement('p');
+
+        //populate properties with data
+        productImage.src = products.image;
+        productTitle.innerHTML = product.title;
+
+        //append elements to productDiv
+        productDiv.appendChild(productTitle);
+        productDiv.appendChild(productImage)
+
+        divs.appendChild(productDiv);
+
+    });
 }); 
+
 }
 
-getData()
+function initialize () {
+    getData()
+}
+initialize()
