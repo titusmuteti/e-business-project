@@ -11,7 +11,6 @@ function getData() {
     let products = data;
 
     const divs = document.getElementById('items');
-    //styling
     divs.style = 'grid-template-columns: auto auto auto auto'
    
 
@@ -24,7 +23,7 @@ function getData() {
         const likeBtn =  document.createElement('button');
         const disLikeBtn =  document.createElement('button');
 
-        //number of likes/dislikes
+        //defining likes/dislikes
         let likecount = 1;
         let dislikeCount =1;
 
@@ -78,8 +77,7 @@ function getData() {
 
 }
 
-
-
+//initializing getData
 function initialize () {
     getData()
 }

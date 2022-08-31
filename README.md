@@ -5,6 +5,11 @@ e-business is an application that presents various products, ranging from clothe
 # Technologies 
 HTML, CSS, and Javascript.
 
+# Project MVP
+Landing page
+Like/dislike buttons
+Product price
+
 # Author 
 Titus Mumo 
 
