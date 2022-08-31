@@ -28,16 +28,15 @@ function getData() {
         const disLikeBtn =  document.createElement('button');
 
         //number of likes
-        let count = 0;
+        let count = 1;
 
         //populate properties with data
         productImage.src = product.image;
         productTitle.innerHTML = product.title;
         productPrize.innerHTML = `Price: ${product.price} $`
-        likeBtn.innerHTML = `${count} likes`
-        disLikeBtn.innerHTML = `${count} dislikes`
+        likeBtn.innerHTML = `like`
+        disLikeBtn.innerHTML = `dislike`
 
-        console.log(`Price:${product.title}`);
         //append elements to productDiv
         productDiv.appendChild(productTitle);
         productDiv.appendChild(productImage);
@@ -58,12 +57,21 @@ function getData() {
         productPrize.style.color = 'red'
         productTitle.style.paddingLeft = '20px'
         productTitle.style.paddingRight = '20px'
+        productPrize.style.paddingBottom = '20px'
         disLikeBtn.style.paddingRight = '50px'
         likeBtn.style.paddingRight = '50px'
         likeBtn.style.fontSize = '20px'
         disLikeBtn.style.fontSize = '20px'
 
+        //adding event listener to button
+        likeBtn.addEventListener('click', ()=> {
+            likeBtn.innerHTML = `${count++} likes`
+            likeBtn.style.backgroundColor = '#89CFF0'
+        
+    })
+
     });
+
 }); 
 
 }
