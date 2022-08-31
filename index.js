@@ -27,7 +27,7 @@ function getData() {
         const likeBtn =  document.createElement('button');
         const disLikeBtn =  document.createElement('button');
 
-        //number of likes
+        //number of likes/dislikes
         let likecount = 1;
         let dislikeCount =1;
 
@@ -52,7 +52,7 @@ function getData() {
         productPrize.style.paddingLeft='30px'
         productTitle.style.fontSize='15px'
         productPrize.style.paddingBottom= '0px'
-        productTitle.style.paddingTop= '100px'
+        productTitle.style.paddingTop= '70px'
         productTitle.style.wordSpacing ='5px'
         productTitle.style.wordBreak
         productPrize.style.color = 'red'
@@ -64,6 +64,7 @@ function getData() {
         likeBtn.style.fontSize = '20px'
         disLikeBtn.style.fontSize = '20px'
 
+
         //adding event listener to button
         likeBtn.addEventListener('click', ()=> {
             likeBtn.innerHTML = `${likecount++} likes`
@@ -72,7 +73,7 @@ function getData() {
         //adding event listener to button
         disLikeBtn.addEventListener('click', ()=> {
             disLikeBtn.innerHTML = `${dislikeCount++} Dislikes`
-            disLikeBtn.style.backgroundColor = 'red'  
+            disLikeBtn.style.backgroundColor = '#c9252c '  
         })
 
     });

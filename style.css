@@ -27,10 +27,23 @@ div#items {
     text-align: center;
     color: green;
     font-style: italic;
+    padding-top: 0%;
 }
 #companyName {
     padding-bottom: 20px;
 }
 img {
     height: 100px;
+}
+.ourProducts {
+    font-size: 30px;
+    color: brown;
+}
+form {
+    background-color: aqua;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.comment {
+    padding-bottom: 20px;
 }
