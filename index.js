@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', getData)
 
-
 const public_api_url = 'https://fakestoreapi.com/products';
-
-
 
 function getData() {
     fetch (public_api_url, {
@@ -64,23 +61,24 @@ function getData() {
         likeBtn.style.fontSize = '20px'
         disLikeBtn.style.fontSize = '20px'
 
-
-        //adding event listener to button
+        //adding event listener to like button
         likeBtn.addEventListener('click', ()=> {
             likeBtn.innerHTML = `${likecount++} likes`
             likeBtn.style.backgroundColor = '#89CFF0'  
-        })
-        //adding event listener to button
+        });
+        //adding event listener to dislike button
         disLikeBtn.addEventListener('click', ()=> {
             disLikeBtn.innerHTML = `${dislikeCount++} Dislikes`
             disLikeBtn.style.backgroundColor = '#c9252c '  
-        })
+        });
 
     });
+});
 
-}); 
 
 }
+
+
 
 function initialize () {
     getData()
