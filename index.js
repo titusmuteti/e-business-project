@@ -23,7 +23,7 @@ function getData() {
         const likeBtn =  document.createElement('button');
         const disLikeBtn =  document.createElement('button');
         const noOfLikes = document.createElement('span');
-        const noOfDisLikes = document.createElement('span')
+        const noOfDisLikes = document.createElement('span');
 
         //defining likes/dislikes
         let like = 0;
@@ -35,11 +35,11 @@ function getData() {
         productImage.src = product.image;
         productTitle.innerHTML = product.title;
         productPrize.innerHTML = `Price: ${product.price} $`
-        likeBtn.innerHTML = `like`
-        disLikeBtn.innerHTML = `${dislike} dislike`
+        likeBtn.innerHTML = `LIKE`
+        disLikeBtn.innerHTML = `DISLIKE`
         noOfLikes.innerHTML = `${like} likes`;
-        noOfDisLikes.innerHTML = `${dislike} likes`
-
+        noOfDisLikes.innerHTML = `${dislike} Dislikes`;
+ 
         //append elements to productDiv
         productDiv.appendChild(productTitle);
         productDiv.appendChild(productImage);
@@ -66,24 +66,26 @@ function getData() {
         productPrize.style.paddingBottom = '20px'
         disLikeBtn.style.marginLeft = '30px'
         likeBtn.style.marginLeft = '10px'
-        likeBtn.style.fontSize = '15px'
+        likeBtn.style.borderRadius = '30%'
         disLikeBtn.style.fontSize = '15px'
+        disLikeBtn.style.borderRadius = '30%'
         noOfLikes.style.marginLeft = '5px'
-        noOfDisLikes.style.marginLeft = '5px'
+        noOfDisLikes.style.marginLeft = '5px'  
 
         //adding event listener to like button
         likeBtn.addEventListener('click', ()=> {
             likeBtn.style.backgroundColor = '#89CFF0'
-            likeBtn.textContent = 'liked';
-            noOfLikes.textContent = `${likeCount} Likes`
-            disLikeBtn.disabled = true  ;
+            likeBtn.textContent = 'LIKED';
+            noOfLikes.textContent = `${likeCount} Likes`;
+            
         });
+    
         //adding event listener to dislike button
         disLikeBtn.addEventListener('click', ()=> {
-            disLikeBtn.style.backgroundColor = '#c9252c';
-            likeBtn.textContent = 'Disliked';
+            disLikeBtn.style.backgroundColor = '#ffcccb';
+            disLikeBtn.textContent = 'DiSLIKED';
             noOfDisLikes.textContent = `${dislikeCount} Dislikes`
-            likeBtn.disabled = true; 
+
         });
 
     });

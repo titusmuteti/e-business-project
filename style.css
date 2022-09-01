@@ -10,7 +10,7 @@ div.header {
     display: block;
     margin: 0px;
     text-align: center;
-    padding-bottom:20px;
+    padding-bottom:35px;
     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmGLHw_BMhSqaJvOkb-Az14eQYgl0jjm1Hkg&usqp=CAU");
 }
 
@@ -43,11 +43,41 @@ img {
     font-size: 30px;
     color: brown;
 }
-.notice {
-    background-color: gold;
-    
-}
 img {
     height: 25px;
-    background-color: gold;
+}
+.notice{
+    padding-top: 50px;
+    margin-right: 20px;
+}
+.fa {
+    float: right;
+    padding-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+.fa-facebook {
+    margin-right: 5550;
+}
+.fa-twitter {
+    margin-right: 555550;
+}
+.fa-instagram {
+    margin-right: 50000;
+}
+#footer {
+    color: white;
+    background-color: rgb(25, 26, 24);
+    padding-top: 25px;
+    text-align: center;
+}
+#contact {
+    padding-bottom: 2%;
+    
+}
+#whatsapp {
+    padding-bottom: 2%;
+}
+#email {
+    padding-bottom: 2%;
 }
