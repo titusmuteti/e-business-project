@@ -24,15 +24,17 @@ function getData() {
         const disLikeBtn =  document.createElement('button');
 
         //defining likes/dislikes
-        let likecount = 1;
-        let dislikeCount =1;
+        let like = 0;
+        let likecount = like + 1;
+        let dislike = 0;
+        let dislikeCount =dislike + 1;
 
         //populate properties with data
         productImage.src = product.image;
         productTitle.innerHTML = product.title;
         productPrize.innerHTML = `Price: ${product.price} $`
-        likeBtn.innerHTML = `like`
-        disLikeBtn.innerHTML = `dislike`
+        likeBtn.innerHTML = `${like} likes`
+        disLikeBtn.innerHTML = `${dislike} dislike`
 
         //append elements to productDiv
         productDiv.appendChild(productTitle);
@@ -48,7 +50,7 @@ function getData() {
         productPrize.style.paddingLeft='30px'
         productTitle.style.fontSize='15px'
         productPrize.style.paddingBottom= '0px'
-        productTitle.style.paddingTop= '70px'
+        productTitle.style.paddingTop= '40px'
         productTitle.style.wordSpacing ='5px'
         productTitle.style.wordBreak
         productPrize.style.color = 'red'
@@ -62,16 +64,22 @@ function getData() {
 
         //adding event listener to like button
         likeBtn.addEventListener('click', ()=> {
-            likeBtn.innerHTML = `${likecount++} likes`
-            likeBtn.style.backgroundColor = '#89CFF0'  
+            if (likeBtn.disabled === false) {
+                console.log('true');
+            }
+            likeBtn.innerHTML = `${likecount} likes`
+            likeBtn.style.backgroundColor = '#89CFF0'
+            disLikeBtn.disabled = true  
         });
         //adding event listener to dislike button
         disLikeBtn.addEventListener('click', ()=> {
-            disLikeBtn.innerHTML = `${dislikeCount++} Dislikes`
-            disLikeBtn.style.backgroundColor = '#c9252c '  
+            disLikeBtn.innerHTML = `${dislikeCount} Dislikes`;
+            disLikeBtn.style.backgroundColor = '#c9252c ';
+            likeBtn.disabled = true; 
         });
 
     });
+    
 });
 
 
