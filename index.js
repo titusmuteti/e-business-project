@@ -64,9 +64,9 @@ function getData() {
         productPrize.style.paddingBottom = '20px'
         disLikeBtn.style.marginLeft = '30px'
         likeBtn.style.marginLeft = '10px'
-        likeBtn.style.borderRadius = '30%'
+        likeBtn.style.borderRadius = '20%'
         disLikeBtn.style.fontSize = '15px'
-        disLikeBtn.style.borderRadius = '30%'
+        disLikeBtn.style.borderRadius = '20%'
         noOfLikes.style.marginLeft = '5px'
         noOfDisLikes.style.marginLeft = '5px'  
 
@@ -104,7 +104,7 @@ function getData() {
 
         });
 
-        
+
     });
     
 });
