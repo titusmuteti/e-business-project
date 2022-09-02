@@ -17,8 +17,9 @@
 - For use in the browser type open index.html in the CLI.
 - No dependencies required
 
+# Github live site link 
+- https://titusmuteti.github.io/e-business-project/
 
 # Author 
 - Titus Mumo 
-- https://github.com/titusmuteti/e-business-project
 

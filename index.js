@@ -102,10 +102,9 @@ function getData() {
 
             }
 
-
         });
 
-
+        
     });
     
 });
