@@ -10,9 +10,7 @@ function getData() {
    .then (data => {
     let products = data;
 
-    const divs = document.getElementById('items');
-    divs.style = 'grid-template-columns: auto auto auto auto'
-   
+    const divs = document.getElementById('items');   
 
     products.forEach(product => {
         //defining elements
@@ -74,19 +72,39 @@ function getData() {
 
         //adding event listener to like button
         likeBtn.addEventListener('click', ()=> {
-            likeBtn.style.backgroundColor = '#89CFF0'
-            likeBtn.textContent = 'LIKED';
-            noOfLikes.textContent = `${likeCount} Likes`;
+            if (likeBtn.innerHTML === 'LIKE') {
+                likeBtn.style.backgroundColor = '#89CFF0'
+                likeBtn.textContent = 'LIKED';
+                noOfLikes.textContent = `${result = likeCount} Likes`;
+                disLikeBtn.disabled =true;
+            } else {
+                likeBtn.style.backgroundColor = 'white';
+                likeBtn.textContent = 'LIKE';
+                noOfLikes.textContent = `${result - 1} Likes`;
+                disLikeBtn.disabled = false;
+            }
             
         });
     
         //adding event listener to dislike button
         disLikeBtn.addEventListener('click', ()=> {
-            disLikeBtn.style.backgroundColor = '#ffcccb';
-            disLikeBtn.textContent = 'DiSLIKED';
-            noOfDisLikes.textContent = `${dislikeCount} Dislikes`
+            if (disLikeBtn.textContent === 'DISLIKE') {
+                disLikeBtn.style.backgroundColor = '#ffcccb';
+                disLikeBtn.textContent = 'DiSLIKED';
+                noOfDisLikes.textContent = `${result = dislikeCount} Dislikes`;
+                likeBtn.disabled = true;
+
+            } else {
+                disLikeBtn.style.backgroundColor = 'white';
+                disLikeBtn.textContent = 'DISLIKE';
+                noOfDisLikes.textContent = `${result - 1} Dislikes`;
+                likeBtn.disabled = false;
+
+            }
+
 
         });
+
 
     });
     

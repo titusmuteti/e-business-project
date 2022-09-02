@@ -22,8 +22,7 @@ h2#slogan {
 }
 div#items {
     display: grid;
-    grid-template-columns: 5;
-    grid-template-rows: 4;
+    grid-template-columns: auto auto auto auto;
 }
 .footer {
     text-align: center;
